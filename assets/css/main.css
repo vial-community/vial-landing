@@ -670,8 +670,12 @@ ul.icons li .icon:before {
 ul.icons li a {
   color: inherit;
 }
-ul.ic
 
+@media screen and (max-width: 768px) {
+  ul.icons li {
+    padding: 0;
+  }
+}
 /* Form */
 form {
   margin: 0 0 2em 0;
@@ -1790,4 +1794,32 @@ footer {
 .asterix {
   color: #c030fa;
   display: contents;
+}
+
+#webinar-card-button {
+  height: auto;
+  padding: 0em 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .webinar-card-content {
+    display: flex;
+    flex-direction: column;
+  }
+  #webinar-card-button {
+    margin: 0 auto;
+  }
+}
+
+.webinar-card-image {
+  width: -webkit-fill-available;
+}
+
+.webinar-card-container {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.webinar-card-content {
+  display: flex;
+  flex-direction: column;
 }
