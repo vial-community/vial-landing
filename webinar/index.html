@@ -18,11 +18,11 @@
 
 <body class="is-preload">
 	<!--Video-->
-	<video autoplay muted loop id="myVideo" class="desktop-video">
+	<video autoplay muted loop playsinline poster="/images/bgScreenshot.jpg" id="myVideo" class="desktop-video">
 		<source src="../desktopBgVidCompressed.mp4#t=1" type="video/mp4">
 	</video>
 
-	<video autoplay muted loop id="myVideo" class="mobile-video">
+	<video autoplay muted loop playsinline poster="/images/bgScreenshot.jpg" id="myVideo" class="mobile-video">
 		<source src="../mobileBgVidCompressed.mp4#t=1" type="video/mp4">
 	</video>
 	<!-- Header -->
@@ -37,14 +37,21 @@
 		<div class="webinar-card-container">
 			<img src="/images/webinar1.png" class="webinar-card-image" />
 			<div class="webinar-card-content">
-				<div class="webinar-card-text">
-
+				<div class="webinar-card-text" id="header">
+					<h1>VIAL WEBINAR</h1>
+					<p>Ky webinar është i gjithi rreth teknologjisë Blokchain. Henri ndan vizionin e tij se si kjo teknologji
+						pritet të influencojë sistemin financiar dhe ekonomik duke shfrytëzuar karakteristën kryesore të kësaj
+						teknologjie inovative: Decentralizimin. Dori, ndan me ne vizionin e tij rreth kriptovalutave dhe NFT-ve në
+						kontekst më praktik nisur nga përditshmëria.
+					</p>
+					<p>
+						Q&A me Henrin dhe Dorin. Mësoni më shumë rreth Blockchain dhe merrni përgjigjet e duhura. Fto një mik dhe
+						shpërblehuni të dy me $10 në ALT COIN. </p>
 				</div>
-				<form name="vial-webinar-form" class="webinar-card-form" action="https://formspree.io/f/xwkyqgor"
-					method="POST">
+				<form name="vial-webinar-form" class="webinar-card-form" action="https://formspree.io/f/xwkyqgor" method="POST">
 					<label class="label-input" for="email">Email <span class="asterix">*</span>
-						<input type="email" name="email" id="email" required /></label>
-					<button id="webinar-card-button" type="submit">Regjistrohu</button>
+						<input type="email" name="email" id="email" class="webinar-email" required /></label>
+					<button id="webinar-card-button" type="submit">Regjistrohu këtu</button>
 
 				</form>
 			</div>
@@ -54,7 +61,7 @@
 
 			</header> -->
 		</div>
-		<div class="countdown-container countdown-container-thanks">
+		<!--<div class="countdown-container countdown-container-thanks">
 			<h1 class="countdown-element" id="headline">Shihemi ne webinar pas: </h1>
 			<div class="countdown-element" id="countdown">
 				<ul>
@@ -64,7 +71,7 @@
 					<li class="countdown-element"><span class="countdown-element" id="seconds"></span>Sekonda</li>
 				</ul>
 			</div>
-		</div>
+		</div>-->
 	</section>
 	<section class="accordion container">
 		<div class="accordion2 container">
@@ -336,7 +343,6 @@
 	<!-- Scripts -->
 	<script src="../assets/js/main.js"></script>
 	<script src="../assets/js/accordion.js"></script>
-	<script src="../assets/js/countdown.js"></script>
 </body>
 
 </html>
