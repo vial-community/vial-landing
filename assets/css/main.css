@@ -1867,8 +1867,8 @@ footer {
 
 .webinar-card-container {
   background: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 0px 27px 14px rgba(0,0,0,0.49); 
-box-shadow: 0px 0px 27px 14px rgba(0,0,0,0.49);
+  -webkit-box-shadow: 0px 0px 27px 14px rgba(0, 0, 0, 0.49);
+  box-shadow: 0px 0px 27px 14px rgba(0, 0, 0, 0.49);
 }
 
 .webinar-card-content {
@@ -1898,7 +1898,7 @@ box-shadow: 0px 0px 27px 14px rgba(0,0,0,0.49);
 /* CSS */
 .whitepaper-container {
   align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -1923,7 +1923,7 @@ box-shadow: 0px 0px 27px 14px rgba(0,0,0,0.49);
 }
 
 .whitepaper-link {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   border: 0px;
   margin-bottom: 0px;
@@ -1947,4 +1947,16 @@ box-shadow: 0px 0px 27px 14px rgba(0,0,0,0.49);
   .whitepaper-icon {
     margin-right: 0.5em;
   }
+}
+
+@media (max-width: 1200px) {
+  .webinar-card-text > p {
+    font-size: 1em !important;
+    line-height: 1.5em !important;
+  }
+}
+
+.webinar-card-text > p {
+  font-size: 1.1em !important;
+  line-height: 1.5em !important;
 }
