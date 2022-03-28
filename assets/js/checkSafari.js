@@ -11,4 +11,5 @@
     document.getElementById("headline").style.display="none";
     document.getElementById("countdown").style.display="none";
     document.getElementById("content").style.display="none";
+    document.getElementsByClassName("countdown-container").style.display="none";
   }
