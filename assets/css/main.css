@@ -523,7 +523,8 @@ code {
   background: rgba(255, 255, 255, 0.125);
   border-radius: 6px;
   border: solid 2px rgba(255, 255, 255, 0.35);
-  font-family: "Courier New", monospace;
+  font-family: "Montserrat", "Roboto", sans-serif;
+
   font-size: 0.9em;
   margin: 0 0.25em;
   padding: 0.25em 0.65em;
@@ -531,7 +532,8 @@ code {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  font-family: "Courier New", monospace;
+  font-family: "Montserrat", "Roboto", sans-serif;
+
   font-size: 0.9em;
   margin: 0 0 2em 0;
 }
@@ -1014,7 +1016,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button,
-.button {
+.button,
+.webinar-calendar-link {
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -1047,7 +1050,8 @@ button[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
-.button:hover {
+.button:hover,
+.webinar-calendar-link:hover {
   background-color: #c030fa;
 }
 input[type="submit"]:active,
@@ -1055,7 +1059,8 @@ button[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active,
 button:active,
-.button:active {
+.button:active,
+.webinar-calendar-link:active {
   background-color: #00f0fe;
 }
 input[type="submit"].disabled,
@@ -1076,7 +1081,8 @@ button:disabled,
   input[type="reset"],
   input[type="button"],
   button,
-  .button {
+  .button,
+  .webinar-calendar-link {
     padding: 0;
   }
 }
@@ -1638,7 +1644,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media screen and (min-width: 480px) {
   input[type="submit"],
-  button[type="submit"] {
+  button[type="submit"],
+  .webinar-calendar-link {
     width: 50%;
     align-self: center;
     margin-top: 20px !important;
@@ -1661,13 +1668,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   text-align: center;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 768px) {
+.countdown-container-thanks {
+  margin-top: 40px;
+}
+}
+
+@media screen and (min-width: 769px) {
   .countdown-container {
     margin-top: 40px;
   }
 
   .countdown-container-thanks {
-    margin-top: 200px;
+    margin-top: 180px;
   }
 }
 
@@ -1836,28 +1849,39 @@ footer {
   display: contents;
 }
 
-#webinar-card-button {
+/*@media screen and (min-width: 480px) {
+  #webinar-card-button, .webinar-calendar-link {
+    width: 45%;
+  }
+}*/
+
+#webinar-card-button, .webinar-calendar-link {
   width: 100%;
   height: auto;
   padding: 0em 1em;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
-@media screen and (min-width: 480px) {
-  #webinar-card-button {
-    width: 50%;
-  }
+#webinar-card-button {
+  margin-right: auto !important;
 }
 
-@media screen and (max-width: 768px) {
-  .webinar-card-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  #webinar-card-button {
-    margin: 0 auto;
-    margin-bottom: 20px;
+.webinar-card-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/*@media screen and (max-width: 768px) {
+
+}*/
+
+@media screen and (min-width: 1200px) {
+  #webinar-card-button, .webinar-calendar-link {
+    width: 49%;
+    height: auto;
+    padding: 0em 1em;
+    margin: 20px 0;
   }
 }
 
@@ -1889,13 +1913,6 @@ footer {
   display: flex;
 }
 
-/* .whitepaper-link {
-  width: max-content;
-  margin: 0 auto;
-}
-<!-- HTML !-->
-
-/* CSS */
 .whitepaper-container {
   align-items: center;
   background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
@@ -1904,8 +1921,8 @@ footer {
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
   display: flex;
-  font-family: Phantomsans, sans-serif;
-  justify-content: space-evenly;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  justify-content: center;
   max-width: 100%;
   min-width: 140px;
   padding: 8px 12px;
@@ -1915,6 +1932,10 @@ footer {
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.whitepaper-icon {
+  margin-right: 30px;
 }
 
 .whitepaper-container:active,
@@ -1927,17 +1948,11 @@ footer {
   text-decoration: none;
   border: 0px;
   margin-bottom: 0px;
+  font-weight: 500;
 }
 
 .whitepaper-link:hover {
   color: #ffffff !important;
-}
-
-@media (min-width: 480px) {
-  .whitepaper-container {
-    width: 50%;
-    margin: 0 auto !important;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1959,4 +1974,51 @@ footer {
 .webinar-card-text > p {
   font-size: 1.1em !important;
   line-height: 1.5em !important;
+}
+
+.webinar-calendar-link {
+  text-decoration: none !important;
+  margin-top: 0px !important;
+  font-weight: 500;
+  font-family: "Montserrat", "Roboto", sans-serif !important;
+}
+.webinar-calendar-link:hover {
+  color: #FFFFFF !important;
+}
+
+#webinar-card-button {
+  font-family: "Montserrat", "Roboto", sans-serif !important;
+  font-weight: 500;
+}
+
+.webinar-form-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .webinar-calendar-link {
+    margin-top: 20px !important;
+  }
+  .webinar-form-buttons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.webinar-countdown-container-thanks {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1000px) {
+  .webinar-countdown-container-thanks {
+    flex-direction: column-reverse;
+    margin: 0px !important;
+  }
+}
+
+.webinar-thank-you-link {
+  width: 90% !important;
+  margin-bottom: 40px;
 }

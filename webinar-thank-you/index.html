@@ -28,71 +28,32 @@
 
 <body class="is-preload">
 	<!--Video-->
-	<video autoplay playsinline muted loop playsinline poster="/images/bgScreenshot.jpg" id="myVideo" class="desktop-video">
+	<video autoplay playsinline muted loop id="myVideo" class="desktop-video">
 		<source src="../desktopBgVidCompressed.mp4#t=1" type="video/mp4">
 	</video>
 
-	<video autoplay playsinline muted loop playsinline poster="/images/bgScreenshot.jpg" id="myVideo" class="mobile-video">
+	<video autoplay playsinline muted loop id="myVideo" class="mobile-video">
 		<source src="../mobileBgVidCompressed.mp4#t=1" type="video/mp4">
 	</video>
 	<!-- Header -->
-	<section class="first-screen-webinar" style="
+	<section class="first-screen-thanks" style="
 		display: flex;
 		padding-top: 100px;
 		flex-direction: column;
 		justify-content: start;
 		min-height: 100vh;
-		background: rgb(0, 0, 0, 0.5)
+		background: rgb(0, 0, 0, 0.5);
 	">
-		<div class="webinar-card-container">
-			<img src="/images/webinar1.png" class="webinar-card-image" />
-			<div class="webinar-card-content">
-				<div class="webinar-card-text" id="header">
-					<h1>VIAL WEBINAR</h1>
-					<p>Ky webinar është i gjithi rreth teknologjisë Blokchain. Henri ndan vizionin e tij se si kjo
-						teknologji pritet të influencojë sistemin financiar dhe ekonomik duke shfrytëzuar karakteristën
-						kryesore të kësaj teknologjie inovative: Decentralizimin. Dori, ndan me ne vizionin e tij rreth
-						kriptovalutave dhe NFT-ve në kontekst më praktik nisur nga përditshmëria.
-					</p>
-					<p>
-						Axhenda:<br>
-						Çfarë problemi zgjidh Blockchain dhe si?<br>
-						Për çfarë nevojiten kriptovalutat?<br>
-						Raste të përdorimit të Blockchain.<br>
-						DeFi, NFT, DAO<br>
-						Fuqizimi i komuniteteve me blockchain.<br>
-						Diçka e re pritet të vijë në Shqipëri.
-					</p>
-					<p>
-						50 të parët që regjistrohen dhe ndjekin LIVE webinarin fitojne $10 vlerë në kripto!
-					</p>
-					<p>
-						Na ndiqni live në 31 Mars, 17:30!	
-					</p>
-				</div>
-				<form name="vial-webinar-form" class="webinar-card-form" action="https://formspree.io/f/xwkyqgor"
-					method="POST">
-					<label class="label-input" for="email">Email <span class="asterix">*</span>
-						<input type="email" name="email" id="email" class="webinar-email" required /></label>
-						<div class="webinar-form-buttons">
-							<button id="webinar-card-button" type="submit">Regjistrohu këtu</button>
-					<a class="webinar-calendar-link" target="_blank" href="https://calendar.google.com/calendar/u/0?cid=dmlhbGNvbW11bml0eTIwMjJAZ21haWwuY29t">Shtoje në Google Calendar</a>
-						</div>
-					<div class="whitepaper-container">
-						<img class="whitepaper-icon" src="../ico.png" />
-						<a href="../vial-whitepaper.pdf" class="whitepaper-link" target="_blank">Shkarko Whitepaper</a>
-					</div>
-
-				</form>
-			</div>
-			<!-- <header class="header-form-container-thanks" id="header">
-				<h1>Mirë se erdhe në VIAL Webinar!</h1>
+		<div>
+			<header class="header-form-container-thanks" id="header">
+				<h1>Mirë se erdhe në VIAL!</h1>
 				<p style="margin-bottom: 0;">Aplikimi juaj u krye me sukses!</p>
-
-			</header> -->
+			</header>
 		</div>
-		<!--<div class="countdown-container countdown-container-thanks">
-			<h1 class="countdown-element" id="headline">Shihemi ne webinar pas: </h1>
+		<div class="countdown-container countdown-container-thanks webinar-countdown-container-thanks">
+			<a class="webinar-calendar-link webinar-thank-you-link" target="_blank" href="https://calendar.google.com/calendar/u/0?cid=dmlhbGNvbW11bml0eTIwMjJAZ21haWwuY29t">Shtoje në Google Calendar</a>
+			<div>
+			<h1 class="countdown-element" id="headline">Shihemi pas: </h1>
 			<div class="countdown-element" id="countdown">
 				<ul>
 					<li class="countdown-element"><span class="countdown-element" id="days"></span>Ditë</li>
@@ -101,12 +62,15 @@
 					<li class="countdown-element"><span class="countdown-element" id="seconds"></span>Sekonda</li>
 				</ul>
 			</div>
-		</div>-->
+			</div>
+		</div>
 	</section>
 	<section class="accordion container">
 		<div class="accordion2 container">
 			<div class="accordion2__content">
-
+				<!--<h2>
+					Frequently Asked Questions
+				</h2>-->
 				<div class="accordion2__item accordion3__item">
 					<header class="item2__header"> <i class='bx bx-chevron-down item2__icon'></i>
 						<h3 class="item2__question">Pyetje të shpeshta</h3>
@@ -373,6 +337,8 @@
 	<!-- Scripts -->
 	<script src="../assets/js/main.js"></script>
 	<script src="../assets/js/accordion.js"></script>
+	<script src="../assets/js/countdown.js"></script>
+
 </body>
 
 </html>
