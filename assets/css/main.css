@@ -1545,10 +1545,10 @@ p.item2__answer {
 
 @media screen and (min-width: 1000px) {
   .header-form-container {
-    max-width: 40%;
+    max-width: 50%;
   }
   .header-form-container-thanks {
-    max-width: 40%;
+    max-width: 50%;
   }
   .webinar-card-container {
     display: flex;
@@ -1642,10 +1642,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
   input[type="submit"],
   button[type="submit"],
-  .webinar-calendar-link {
+  .webinar-calendar-link,
+  .whitepaper-container {
     width: 50%;
     align-self: center;
     margin-top: 20px !important;
