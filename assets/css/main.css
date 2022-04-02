@@ -2023,3 +2023,21 @@ footer {
   width: 90% !important;
   margin-bottom: 40px;
 }
+
+.custom-question-input {
+  margin-top: 20px;
+}
+
+.custom-questions-button {
+  padding: 0 1em;
+}
+
+
+@media screen and (min-width: 1000px) {
+.custom-questions-button {
+  max-width: 25% !important;
+}
+.custom-question-form {
+  max-width: 50%;
+}
+}

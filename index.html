@@ -7,14 +7,14 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-223283149-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-223283149-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-  gtag('config', 'UA-223283149-1');
-</script>
+		gtag('config', 'UA-223283149-1');
+	</script>
 
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -47,15 +47,14 @@
 			</header>
 
 			<!-- Signup Form -->
-			<form name="vial-validate" class="header-form-container" id="signup-form"
-				action="https://formspree.io/f/xeqngeog" method="POST"> <label class="label-input" for="email">Email
+			<form name="vial-validate" class="header-form-container" id="signup-form" action="https://formspree.io/f/xeqngeog"
+				method="POST"> <label class="label-input" for="email">Email
 					<span class="asterix">*</span>
-					<input type="email" name="email" id="email" required /></label> <label class="label-input"
-					for="fullName">Emri i plotë <span class="asterix">*</span> <input type="text" name="fullName"
-						id="fullName" required /></label>
+					<input type="email" name="email" id="email" required /></label> <label class="label-input" for="fullName">Emri
+					i plotë <span class="asterix">*</span> <input type="text" name="fullName" id="fullName" required /></label>
 				<label class="label-input" for="birthday">Datëlindja <span class="asterix">*</span> <input type="date"
-						name="birthday" id="birthday" required /></label> <label class="label-input"
-					for="occupation">Angazhimi juaj <select name="occupation" id="occupation" required>
+						name="birthday" id="birthday" required /></label> <label class="label-input" for="occupation">Angazhimi juaj
+					<select name="occupation" id="occupation" required>
 						<option value="" disabled selected>...</option>
 						<option value="student">Student</option>
 						<option value="teknologji">Teknologji</option>
@@ -66,8 +65,8 @@
 						<option value="ligj">Ligj</option>
 						<option value="tjeter">Tjetër</option>
 					</select></label>
-				<div class="terms"> <input type="checkbox" name="dakort" id="dakort" required> <label
-						for="dakort">Pranoj <a id="terms" href="./assets/terms.pdf" target="_">kushtet e
+				<div class="terms"> <input type="checkbox" name="dakort" id="dakort" required> <label for="dakort">Pranoj <a
+							id="terms" href="./assets/terms.pdf" target="_">kushtet e
 							dakordësisë</a></label> </div>
 				<h5 class="hidden" id="termsErrorMessage">Ju lutem pranoni kushtet</h5>
 				<h5 class="hidden" id="formErrorMessage">Ju lutem plotësoni fushat me informacion të saktë</h5>
@@ -334,9 +333,24 @@
 							</div>
 						</div>
 					</div>
+					<header class="item2__header"> <i class='bx bx-chevron-down item2__icon'></i>
+						<h3 class="item2__question">Pyetje të tjera</h3>
+					</header>
+					<div class="item2__content">
+						<div class="accordion2__item accordion4__item item2__answer">
+							<div class="accordion__content">
+								<form class="custom-question-form" action="https://formspree.io/f/xyyodlky" method="POST">
+									<label>
+										<h3 class="item__question">Kërkon të dish më shumë? Dërgo pyetjen tënde këtu dhe do të kthehemi së shpejti tek ty!</h3>
+										<input class="custom-question-input" type="email" name="email">
+									</label>
+									<button class="custom-questions-button" type="submit">Dërgo</button>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-
 		</div>
 		</div>
 	</section>
@@ -354,7 +368,6 @@
 								class="label">Telegram</span></a></li>
 					<li><a href="https://medium.com/@VialCommunity" class="icon brands fa-medium"><span
 								class="label">Medium</span></a></li>
-
 				</div>
 				<div class="socials-second">
 					<li><a href="https://discord.com/invite/EbgSjHuNdM" class="icon brands fa-discord"><span
@@ -381,7 +394,7 @@
 	<!-- Scripts -->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/accordion.js"></script>
-	<script src="assets/js/countdown.js"></script>
+	<!--<script src="assets/js/countdown.js"></script>-->
 	<script src="assets/js/validation.js"></script>
 </body>
 
