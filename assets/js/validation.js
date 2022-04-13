@@ -34,6 +34,7 @@ function validateForm() {
       return false;
     }
   }
+  grecaptcha.execute();
   validateFields();
   validateTerms();
 }
