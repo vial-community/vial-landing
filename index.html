@@ -68,13 +68,15 @@
 	<!-- Header -->
 	<section class="first-screen">
 		<div>
-			<div class="language-container">
-				<!-- ignore comments -->
-				<a href="/?lng=sq"><img class="flag-icon" src="./images/flag-icons/al.svg"></span></a>
-				<span class="flag-separator"> | </span>
-				<a href="/?lng=en"><img class="flag-icon" src="./images/flag-icons/gb.svg"></span></a>
-		</div>
 			<!-- <div class="header-form-container"> -->
+				<div class="language-row">
+					<div class="language-container">
+						<!-- ignore comments -->
+						<a class="sq-flag" href="/?lng=sq"><img class="flag-icon" src="./images/flag-icons/al.svg"></span></a>
+						<span class="flag-separator"> | </span>
+						<a class="en-flag" href="/?lng=en"><img class="flag-icon" src="./images/flag-icons/gb.svg"></span></a>
+				</div>
+			</div>
 			<header class="header-form-container" id="header">
 				<h1>Mirë se erdhe në VIAL!</h1>
 				<p style="margin-bottom: 0;">Së bashku do të krijojmë një realitet virtual ndryshe.</p>
@@ -100,7 +102,7 @@
 						<option value="tjeter">Tjetër</option>
 					</select></label>
 				<div class="terms"> 
-					<input class="g-recaptcha" data-sitekey="6Le8EVofAAAAAOUTZGzP_gPHoQhNUy33QfO8Z9DP" type="checkbox" name="dakort" id="dakort" required> 
+					<input type="checkbox" name="dakort" id="dakort" required> 
 					<label for="dakort">Pranoj 
 						<a id="terms" href="./assets/terms.pdf" target="_">kushtet e dakordësisë</a>
 					</label>
@@ -390,6 +392,7 @@
 	<script src="assets/js/accordion.js"></script>
 	<!--<script src="assets/js/countdown.js"></script>-->
 	<script src="assets/js/validation.js"></script>
+	<script src="assets/js/languageDetector.js"></script>
 	
 </body>
 
