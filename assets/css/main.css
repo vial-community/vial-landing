@@ -2041,3 +2041,27 @@ footer {
   max-width: 50%;
 }
 }
+
+.language-container {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  top: 20px;
+  right: 20px;
+}
+
+.language-container > a {
+  border: 0;
+  margin-top: 2.5px;
+}
+
+.flag-separator {
+  font-size: 23px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: default;
+}
+
+.flag-icon {
+  width: 30px;
+}

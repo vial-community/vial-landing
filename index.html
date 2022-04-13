@@ -16,6 +16,36 @@
 		gtag('config', 'UA-223283149-1');
 	</script>
 
+	<!-- Localization -->
+	<script src="/i18nextify.min.js"></script>
+	<script>
+		var translation = window.i18nextify.init({
+			debug: true,
+			saveMissing: true,
+			keyAttr: 'i18next-key__Disabled',
+			ignoreWithoutKey: false,
+			namespace: 'translation',
+			// namespaceFromPath: true,
+			ns: ['common', 'commonNested'],
+			ignoreTags: ['script', 'h6'],
+			ignoreIds: ['ignoreMeId'],
+			ignoreClasses: ['ignoreMeClass']
+			//autorun: false,
+			//dangerouslyUseInnerHtml: true
+		});
+		// setTimeout(function () {
+		//   translation.start();
+		// }, 4000);
+
+		setTimeout(() => {
+			window.i18nextify.forceRerender();
+		}, 5000);
+	</script>
+
+	<!-- Google ReCaptcha-->
+
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="icon" type="image/x-icon" href="ico.png">
@@ -26,32 +56,36 @@
 
 </head>
 
-<body class="is-preload">
+<body style="display: none" class="is-preload">
 	<!--Video-->
-	<video autoplay playsinline disablePictureInPicture   muted loop id="myVideo" class="desktop-video">
+	<video autoplay playsinline disablePictureInPicture muted loop id="myVideo" class="desktop-video">
 		<source src="https://vial-landing-space.fra1.digitaloceanspaces.com/desktopBgVidCompressed.mp4" type="video/mp4">
 	</video>
 
-	<video autoplay playsinline disablePictureInPicture   muted loop id="myVideo" class="mobile-video">
+	<video autoplay playsinline disablePictureInPicture muted loop id="myVideo" class="mobile-video">
 		<source src="https://vial-landing-space.fra1.digitaloceanspaces.com/mobileBgVidCompressed.mp4" type="video/mp4">
 	</video>
 	<!-- Header -->
 	<section class="first-screen">
 		<div>
+			<div class="language-container">
+				<!-- ignore comments -->
+				<a href="/?lng=sq"><img class="flag-icon" src="./images/flag-icons/al.svg"></span></a>
+				<span class="flag-separator"> | </span>
+				<a href="/?lng=en"><img class="flag-icon" src="./images/flag-icons/gb.svg"></span></a>
+		</div>
 			<!-- <div class="header-form-container"> -->
 			<header class="header-form-container" id="header">
 				<h1>Mirë se erdhe në VIAL!</h1>
-				<p style="margin-bottom: 0;">Së bashku do të krijojmë një realitet virtual ndryshe. </p>
-				<p> Të bashkuar jemi më të fortë, ndaj bëhu edhe ti pjesë e komunitetit të parë të decentralizuar në
-					Shqipëri.</p>
+				<p style="margin-bottom: 0;">Së bashku do të krijojmë një realitet virtual ndryshe.</p>
+				<p>Të bashkuar jemi më të fortë, ndaj bëhu edhe ti pjesë e komunitetit të parë të decentralizuar në Shqipëri.</p>
 			</header>
 
 			<!-- Signup Form -->
 			<form name="vial-validate" class="header-form-container" id="signup-form" action="https://formspree.io/f/xeqngeog"
 				method="POST"> <label class="label-input" for="email">Email
 					<span class="asterix">*</span>
-					<input type="email" name="email" id="email" required /></label> <label class="label-input" for="fullName">Emri
-					i plotë <span class="asterix">*</span> <input type="text" name="fullName" id="fullName" required /></label>
+					<input type="email" name="email" id="email" required /></label> <label class="label-input" for="fullName">Emri i plotë <span class="asterix">*</span> <input type="text" name="fullName" id="fullName" required /></label>
 				<label class="label-input" for="birthday">Datëlindja <span class="asterix">*</span> <input type="date"
 						name="birthday" id="birthday" required /></label> <label class="label-input" for="occupation">Angazhimi juaj
 					<select name="occupation" id="occupation" required>
@@ -65,11 +99,16 @@
 						<option value="ligj">Ligj</option>
 						<option value="tjeter">Tjetër</option>
 					</select></label>
-				<div class="terms"> <input type="checkbox" name="dakort" id="dakort" required> <label for="dakort">Pranoj <a
-							id="terms" href="./assets/terms.pdf" target="_">kushtet e
-							dakordësisë</a></label> </div>
+				<div class="terms"> 
+					<input class="g-recaptcha" data-sitekey="6Le8EVofAAAAAOUTZGzP_gPHoQhNUy33QfO8Z9DP" type="checkbox" name="dakort" id="dakort" required> 
+					<label for="dakort">Pranoj 
+						<a id="terms" href="./assets/terms.pdf" target="_">kushtet e dakordësisë</a>
+					</label>
+				 </div>
 				<h5 class="hidden" id="termsErrorMessage">Ju lutem pranoni kushtet</h5>
 				<h5 class="hidden" id="formErrorMessage">Ju lutem plotësoni fushat me informacion të saktë</h5>
+				<div class="g-recaptcha" data-sitekey="6Le8EVofAAAAAOUTZGzP_gPHoQhNUy33QfO8Z9DP"></div>
+				<br />
 				<button id="validator" onClick="validateForm()" type="submit">Jam gati!</button>
 				<div class="whitepaper-container"><img class="whitepaper-icon" src="./ico.png" />
 					<a href="vial-whitepaper.pdf" class="whitepaper-link" target="_blank">Shkarko Whitepaper</a>
@@ -104,24 +143,18 @@
 							<div class="accordion__content">
 								<div class="accordion__item">
 									<header class="item__header"> <i class='bx bx-chevron-down item__icon'></i>
-										<h3 class="item__question">Cfarë të kuptojmë me "komunitet i decentralizuar"?
-										</h3>
+										<h3 class="item__question">Cfarë të kuptojmë me “komunitet i decentralizuar”?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Një komunitet i decentralizuar është një rrjet që ka
-											aftësinë të qeveriset nga çdo anëtar, duke e bërë këtë komunitet më të
-											drejtë dhe më demokratik. </p>
+										<p class="item__answer"> Një komunitet i decentralizuar është një rrjet që ka aftësinë të qeveriset nga çdo anëtar, duke e bërë këtë komunitet më të drejtë dhe më demokratik. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
 									<header class="item__header"> <i class='violet bx bx-chevron-down item__icon'></i>
-										<h3 class="item__question">Cfare duhet të bëjë për të qenë pjesë e komunitetit
-											Vial? </h3>
+										<h3 class="item__question">Cfare duhet të bëjë për të qenë pjesë e komunitetit Vial? </h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer">Për momentin është e nevojshme të regjistroheni si më
-											sipër për të qenë ndër të parët që do të përfitoni përpara lancimit zyrtar
-											që Vial do të ketë. </p>
+										<p class="item__answer">Për momentin është e nevojshme të regjistroheni si më sipër për të qenë ndër të parët që do të përfitoni përpara lancimit zyrtar që Vial do të ketë. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -129,56 +162,49 @@
 										<h3 class="item__question">Kur do të hidhet në treg monedha e Vial? </h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Informacion të detajuar mbi “tokenomics” do të gjeni në
-											White Paper. </p>
+										<p class="item__answer"> Informacion të detajuar mbi “tokenomics” do të gjeni në White Paper. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
 									<header class="item__header"> <i class='bx bx-chevron-down item__icon'></i>
-										<h3 class="item__question">A është Vial para falas? </h3>
+										<h3 class="item__question">A është Vial para falas?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Vial nuk është para falas. Është një projekt afatgjatë
-											suksesi i të cilit varet nga kontributet e antarëve të saj.
-
-											Rrjeti ka për qëllim të ndihmojë njerëzit e thjeshtë të kenë ekspozim ndaj
-											një vlere ekonomike që sot shkon drejt palëve të treta. Vial DAS varet nga
-											kontributet kolektive të shoqërisë. </p>
+										<p class="item__answer"> Vial nuk është para falas. Është një projekt afatgjatë suksesi i të cilit varet nga kontributet e antarëve të saj.</br>
+											Rrjeti ka për qëllim të ndihmojë njerëzit e thjeshtë të kenë ekspozim ndaj një vlere ekonomike që sot shkon drejt palëve të treta. Vial DAS varet nga kontributet kolektive të shoqërisë. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
 									<header class="item__header"> <i class='violet bx bx-chevron-down item__icon'></i>
-										<h3 class="item__question">A ka ndonjë kriter për t'u regjistruar në komunitetin
-											e Vial?</h3>
+										<h3 class="item__question">A ka ndonjë kriter për t'u regjistruar në komunitetin e Vial?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Jo! Të gjithë janë të ftuar ti bashkohen këtij
-											komuniteti. </p>
+										<p class="item__answer"> Jo! Të gjithë janë të ftuar ti bashkohen këtij komuniteti. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
 									<header class="item__header"> <i class='bx bx-chevron-down item__icon'></i>
-										<h3 class="item__question">A është e nevojshme të mbledh pikë për ti konvertuar
-											në monedhen Vial?</h3>
+										<h3 class="item__question">A është e nevojshme të mbledh pikë për ti konvertuar në monedhen Vial?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Së shpejti do të prezantohen një sërë mënyrash që ju
-											mund të grumbulloni pikë duke qenë aktivë në forumin e Vial.al dhe
-											gjithashtu në aplikacionin vial.app </p>
+										<p class="item__answer"> Së shpejti do të prezantohen një sërë mënyrash që ju mund të grumbulloni pikë duke qenë aktivë në forumin e Vial.al dhe gjithashtu në aplikacionin vial.app. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
 									<header class="item__header"> <i class='violet bx bx-chevron-down item__icon'></i>
-										<h3 class="item__question">Cili është vizioni i aplikacionit përsa i përket
-											zhvillimit të tij?</h3>
+										<h3 class="item__question">Cili është vizioni i aplikacionit përsa i përket zhvillimit të tij?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> VIAL ka vizionin që brenda platformës të përfshihen
-											këto komponentë: </br>VIAL Voice </br>VIAL Education Hub </br>VIAL Rewards
-											</br>VIAL Marketplace
-											</br>VIAL Launchpad </br>VIAL Causes/Charity </br>VIAL Tourism &
-											Entertainment </br>VIAL Vote
-											</br>VIAL DeFi Services </p>
+										<p class="item__answer"> VIAL ka vizionin që brenda platformës të përfshihen këto komponentë: 
+										</br>VIAL Voice 
+										</br>VIAL Education Hub
+										</br>VIAL Rewards
+										</br>VIAL Marketplace
+										</br>VIAL Launchpad
+										</br>VIAL Causes/
+									  </br>VIAL Tourism & Entertainment
+										</br>VIAL Vote
+										</br>VIAL DeFi Services </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -186,11 +212,7 @@
 										<h3 class="item__question">Për çfarë shërben seksioni “Vial Voice”?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Ju mund të lexoni përmbajtje edukative lidhur me
-											kriptomonedhat dhe blockchain, të angazhoheni me anëtarët e tjerë të
-											komunitetit për temat tuaja të preferuara, të postoni përmbajtje dhe
-											gjithashtu të shpërbleheni me pikë VIAL për këtë aktivitet. Pikët e
-											grumbulluara do të përdoren për t’ju shpërblyer në vazhdim. </p>
+										<p class="item__answer"> Ju mund të lexoni përmbajtje edukative lidhur me kriptomonedhat dhe blockchain, të angazhoheni me anëtarët e tjerë të komunitetit për temat tuaja të preferuara, të postoni përmbajtje dhe gjithashtu të shpërbleheni me pikë VIAL për këtë aktivitet. Pikët e grumbulluara do të përdoren për t’ju shpërblyer në vazhdim. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -198,8 +220,7 @@
 										<h3 class="item__question">Kush mund të votojë në Vial?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Të gjithë anëtarët që kanë një numër të konsiderueshëm
-											pikësh mund të votojnë. </p>
+										<p class="item__answer"> Të gjithë anëtarët që kanë një numër të konsiderueshëm pikësh mund të votojnë. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -207,9 +228,7 @@
 										<h3 class="item__question">A mund të krijoj një pyetësor në Vial?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Ju mund të shtoni sugjerime për propozimin e ardhshëm,
-											por rrjeti do të jetë ai që do të vendosë nëse një propozim duhet të
-											votohet. Të paktën derisa rrjeti të jetë live. </p>
+										<p class="item__answer"> Ju mund të shtoni sugjerime për propozimin e ardhshëm, por rrjeti do të jetë ai që do të vendosë nëse një propozim duhet të votohet. Të paktën derisa rrjeti të jetë live. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -217,9 +236,7 @@
 										<h3 class="item__question">A më duhen “monedha Vial” për të votuar?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Për të votuar do të duhen vetëm pikë të grumbulluara
-											nga aktiviteti në Vial. Pasi rrjeti të jetë live, komunitetit do ti duhen
-											moendhat për të votuar. </p>
+										<p class="item__answer"> Për të votuar do të duhen vetëm pikë të grumbulluara nga aktiviteti në Vial. Pasi rrjeti të jetë live, komunitetit do ti duhen monedhat për të votuar.</p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -227,10 +244,7 @@
 										<h3 class="item__question">Cili është qëllimi dhe vlera e Vial Points?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Në sistemin e brendshëm në komunitetin tonë pikët Vial
-											janë për të nxitur dhe mbajtur gjurmët e veprimeve të përdoruesit. Meqenëse
-											Vial synon të evolohet rreth nje ekonomie blockchain, vlera e tyre do të
-											përshtatet sipas monedhës Vial. </p>
+										<p class="item__answer"> Në sistemin e brendshëm në komunitetin tonë pikët Vial janë për të nxitur dhe mbajtur gjurmët e veprimeve të përdoruesit. Meqenëse Vial synon të evolohet rreth nje ekonomie blockchain, vlera e tyre do të përshtatet sipas monedhës Vial. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -238,8 +252,7 @@
 										<h3 class="item__question">Mund të blej pikë me monedha fiat?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Pikët mund të grumbullohen vetëm duke qenë aktiv në
-											Vial. </p>
+										<p class="item__answer"> Pikët mund të grumbullohen vetëm duke qenë aktiv në Vial. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -248,8 +261,7 @@
 										</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Platforma e Vial do të testohet dhe kontrollohet
-											përpara se ti ofrohet komunitetit. </p>
+										<p class="item__answer"> Platforma e Vial do të testohet dhe kontrollohet përpara se ti ofrohet komunitetit. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -257,21 +269,16 @@
 										<h3 class="item__question">Cili eshte qellimi i komunitetit ViAL?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Qëllimi i komunitetit do të jetë të angazhimi në mënyrë
-											të organizuar dhe demokratike per ndërtimin e nje shoqërie të decentralizuar
-											që do të qeverisë realitetin e tyre të ardhshëm, mundësuar nga Web 3.
+										<p class="item__answer"> Qëllimi i komunitetit do të jetë të angazhimi në mënyrë të organizuar dhe demokratike per ndërtimin e nje shoqërie të decentralizuar që do të qeverisë realitetin e tyre të ardhshëm, mundësuar nga Web 3.
 										</p>
 									</div>
 								</div>
 								<div class="accordion__item">
 									<header class="item__header"> <i class='violet bx bx-chevron-down item__icon'></i>
-										<h3 class="item__question">Pse duhet ti bashkohem Vial krahasuar me platformat e
-											tjera në Multivers?</h3>
+										<h3 class="item__question">Pse duhet ti bashkohem Vial krahasuar me platformat e tjera në Multivers?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Ju duhet të jeni pjesë e Vial dhe të gjitha platformave
-											Metaverse për aq kohë sa të gjeni vlerën që komunitetet përkatëse ju
-											ofrojnë. </p>
+										<p class="item__answer"> Ju duhet të jeni pjesë e Vial dhe të gjitha platformave Metaverse për aq kohë sa të gjeni vlerën që komunitetet përkatëse ju ofrojnë. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -279,8 +286,7 @@
 										<h3 class="item__question">A mund ta rregjistroj biznesin tim në Vial?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Për momentin jo, por është në planet afatgjata të
-											kompanisë. Bizneset do luajnë një rol kyç në të ardhmen e Vial. </p>
+										<p class="item__answer"> Për momentin jo, por është në planet afatgjata të kompanisë. Bizneset do luajnë një rol kyç në të ardhmen e Vial. </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -289,9 +295,7 @@
 										</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Po. Nëpërmjet DEX (shkëmbime të decentralizuara)
-											fillimisht dhe më pas përmes atyre të centralizuara (si Kucoin, Binance,
-											etj.). </p>
+										<p class="item__answer"> Po. Nëpërmjet DEX (shkëmbime të decentralizuara) fillimisht dhe më pas përmes atyre të centralizuara (si Kucoin, Binance, etj.). </p>
 									</div>
 								</div>
 								<div class="accordion__item">
@@ -299,12 +303,7 @@
 										<h3 class="item__question">Çfarë është një DAO?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer">
-											DAO quhet një Organizate Autonome e Decentralizuar. Ajo ëhtë një nga rastet
-											më të përdorura të
-											blockchain-eve, ku cdokush mund të krijojë struktura qeverisëse mbi një
-											platforme prej smart contracts
-											për ta automatizuar dhe siguruar proçesin e marrjes së vendimeve.
+										<p class="item__answer">DAO quhet një Organizate Autonome e Decentralizuar. Ajo ëhtë një nga rastet më të përdorura të blockchain-eve, ku cdokush mund të krijojë struktura qeverisëse mbi një platforme prej smart contracts për ta automatizuar dhe siguruar proçesin e marrjes së vendimeve.
 										</p>
 									</div>
 								</div>
@@ -313,10 +312,7 @@
 										<h3 class="item__question">Çfarë janë smart contracts?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer">
-											Smart contracts janë marrëveshje të koduara në një sistem blockchain ku ato
-											zbatohen automatikisht, pa patur nevojë për tu verifikuar nga një palë e
-											tretë.
+										<p class="item__answer">Smart contracts janë marrëveshje të koduara në një sistem blockchain ku ato zbatohen automatikisht, pa patur nevojë për tu verifikuar nga një palë e tretë.
 										</p>
 									</div>
 								</div>
@@ -325,9 +321,7 @@
 										<h3 class="item__question">Si do të rritet vlera e monedhës Vial?</h3>
 									</header>
 									<div class="item__content">
-										<p class="item__answer"> Sa më shumë transaksione të ndodhin në shoqërinë e
-											tokenizuar të Vial, aq më i vlefshëm është monedha ViAl për shkak të
-											mekanikës së tij. </p>
+										<p class="item__answer"> Sa më shumë transaksione të ndodhin në shoqërinë e tokenizuar të Vial, aq më i vlefshëm është monedha ViAl për shkak të mekanikës së tij. </p>
 									</div>
 								</div>
 							</div>
@@ -342,7 +336,7 @@
 								<form class="custom-question-form" action="https://formspree.io/f/xyyodlky" method="POST">
 									<label>
 										<h3 class="item__question">Kërkon të dish më shumë? Dërgo pyetjen tënde këtu dhe do të kthehemi së shpejti tek ty!</h3>
-										<input class="custom-question-input" type="text" name="question">
+										 <input class="custom-question-input" type="text" name="question" required>
 									</label>
 									<button class="custom-questions-button" type="submit">Dërgo</button>
 								</form>
@@ -396,6 +390,7 @@
 	<script src="assets/js/accordion.js"></script>
 	<!--<script src="assets/js/countdown.js"></script>-->
 	<script src="assets/js/validation.js"></script>
+	
 </body>
 
 </html>
