@@ -2130,7 +2130,6 @@ h4 {
 .menu-link-logo {
   width: 100px;
   margin-right: auto;
-  margin-left: 0.5em;
 }
 
 .main-content-subtitle {
@@ -2149,6 +2148,7 @@ h4 {
 @media screen and (max-width: 425px) {
   .menu-link-logo {
     width: 100px;
+    margin-left: 0.5em;
   }
   .menu-container-mobile {
     display: flex;
