@@ -1609,6 +1609,64 @@ p.item2__answer {
       }
     }*/
 
+  .whitepaper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quiz-entry-form {
+    margin-top: 3em;
+  }
+
+  .quiz-entry-submit {
+    width: 300px !important;
+    margin-top: 2em;
+  }
+
+  .quiz-entry-form-div {
+    margin-bottom: 2.5em;
+  }
+
+  .quiz-entry-telegram-container {
+    width: 300px;
+    background-color: #c030fa;
+    border-radius: 0.4em;
+  }
+
+  .quiz-entry-telegram-link {
+    display: flex;
+    justify-content: center;
+    font-size: 16px !important;
+    font-weight: 700;
+    color: #ffffff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .quiz-entry-telegram-text {
+    margin-left: 2em;
+  }
+
+  .quiz-entry-headings {
+    color: #ffffff !important;
+    margin-bottom: 1em;
+  }
+
+  .quiz-entry-telegram-container:hover {
+    background-color:#2b1dff;
+  }
+
+  .quiz-entry-telegram-container:active {
+    background-color: #00f0fe;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .quiz-entry-main-container {
+      max-width: 40% !important;
+    }    
+  }
+
 @media screen and (min-width: 1080px) {
   .mobile-video {
     display: none;
@@ -1649,7 +1707,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   input[type="submit"],
   button[type="submit"],
   .webinar-calendar-link,
-  .whitepaper-container {
+  .whitepaper-link {
     width: 50%;
     align-self: center;
     margin-top: 20px !important;
@@ -1913,18 +1971,13 @@ footer {
   color: rgb(255, 255, 255);
 }
 
-.whitepaper-container {
-  display: flex;
-}
-
-.whitepaper-container {
+.whitepaper-link {
   align-items: center;
   background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
-  display: flex;
   font-family: "Montserrat", "Roboto", sans-serif;
   justify-content: center;
   max-width: 100%;
@@ -1942,8 +1995,8 @@ footer {
   margin-right: 30px;
 }
 
-.whitepaper-container:active,
-.whitepaper-container:hover {
+.whitepaper-link:active,
+.whitepaper-link:hover {
   outline: 0;
 }
 
@@ -1960,7 +2013,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .whitepaper-container {
+  .whitepaper-link {
     justify-content: center;
   }
   .whitepaper-icon {

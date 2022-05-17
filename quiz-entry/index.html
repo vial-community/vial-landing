@@ -7,14 +7,14 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-223283149-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-223283149-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-		gtag('config', 'UA-223283149-1');
-	</script>
+  gtag('config', 'UA-223283149-1');
+</script>
 
 	<!-- Localization -->
 	<script src="/i18nextify.min.js"></script>
@@ -43,12 +43,11 @@
 	</script>
 
 	<!-- Google ReCaptcha-->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
 	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="icon" type="image/x-icon" href="ico.png">
+	<link rel="icon" type="image/x-icon" href="../ico.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -56,90 +55,68 @@
 
 </head>
 
-<body style="display: none" class="is-preload">
+<body class="is-preload">
 	<!--Video-->
-	<video autoplay playsinline disablePictureInPicture muted loop id="myVideo" class="desktop-video">
+	<video autoplay playsinline disablePictureInPicture   muted loop id="myVideo" class="desktop-video">
 		<source src="https://vial-landing-space.fra1.digitaloceanspaces.com/desktopBgVidCompressed.mp4" type="video/mp4">
 	</video>
 
-	<video autoplay playsinline disablePictureInPicture muted loop id="myVideo" class="mobile-video">
+	<video autoplay playsinline disablePictureInPicture   muted loop id="myVideo" class="mobile-video">
 		<source src="https://vial-landing-space.fra1.digitaloceanspaces.com/mobileBgVidCompressed.mp4" type="video/mp4">
 	</video>
 	<!-- Header -->
-	<section class="first-screen">
-		<div>
-			<!-- <div class="header-form-container"> -->
-				<div class="language-row">
-					<div class="language-container">
-						<!-- ignore comments -->
-						<a class="sq-flag" href="/?lng=sq"><img class="flag-icon" src="./images/flag-icons/al.svg"></span></a>
-						<span class="flag-separator"> | </span>
-						<a class="en-flag" href="/?lng=en"><img class="flag-icon" src="./images/flag-icons/gb.svg"></span></a>
-				</div>
-			</div>
-			<header class="header-form-container" id="header">
-				<h1>Mirë se erdhe në VIAL!</h1>
-				<p style="margin-bottom: 0;">Së bashku do të krijojmë një realitet virtual ndryshe.</p>
-				<p>Të bashkuar jemi më të fortë, ndaj bëhu edhe ti pjesë e komunitetit të parë të decentralizuar në Shqipëri.</p>
-			</header>
-
-			<!-- Signup Form -->
-			<form name="vial-validate" class="header-form-container" id="signup-form" action="https://formspree.io/f/xeqngeog"
-				method="POST"> <label class="label-input" for="email">Email
-					<span class="asterix">*</span>
-					<input type="email" name="email" id="email" required /></label> <label class="label-input" for="fullName">Emri i plotë <span class="asterix">*</span> <input type="text" name="fullName" id="fullName" required /></label>
-				<label class="label-input" for="birthday">Datëlindja <span class="asterix">*</span> <input type="date"
-						name="birthday" id="birthday" required /></label> <label class="label-input" for="occupation">Angazhimi juaj
-					<select name="occupation" id="occupation" required>
-						<option value="" disabled selected>...</option>
-						<option value="student">Student</option>
-						<option value="teknologji">Teknologji</option>
-						<option value="ekonomiFinance">Ekonomi / Financë</option>
-						<option value="arte">Arte</option>
-						<option value="biznes">Biznes</option>
-						<option value="media">Media</option>
-						<option value="ligj">Ligj</option>
-						<option value="tjeter">Tjetër</option>
-					</select></label>
-				<div class="terms"> 
-					<input type="checkbox" name="dakort" id="dakort" required> 
-					<label for="dakort">Pranoj 
-						<a id="terms" href="./assets/terms.pdf" target="_">kushtet e dakordësisë</a>
-					</label>
-				 </div>
-				<h5 class="hidden" id="termsErrorMessage">Ju lutem pranoni kushtet</h5>
-				<h5 class="hidden" id="formErrorMessage">Ju lutem plotësoni fushat me informacion të saktë</h5>
-				<div class="g-recaptcha"
+	<section class="first-screen-thanks" style="
+		display: flex;
+		padding-top: 100px;
+		flex-direction: column;
+		justify-content: start;
+		min-height: 100vh;
+		background: rgb(0, 0, 0, 0.5);
+	">
+		<main class="quiz-entry-main-container">
+        <div>
+				<h1>VIAL QUIZ: Sa Crypto-Geek e mban veten? </h1>
+        <h3 class="quiz-entry-headings">VIAL do të organizojë një quiz live në datën 28 MAJ, ora 17:00-17:30 PM në Story</h3>
+        <h3 class="quiz-entry-headings">$50 USDT për 5 FITUES!</h3>
+      </div>
+      <div class="quiz-entry-container">
+        <h3 class="quiz-entry-headings">
+          Hapat që duhet të ndiqni për t’u regjistruar në këtë quiz:
+        </h3>
+        <form aria-colcount="quiz-entry-form" method="POST" action="https://formspree.io/f/xlezaarz" class="quiz-entry-form">
+          <div class="quiz-entry-form-div">
+          <h5>1. IG Username</h5>
+          <label>Shkruaje këtu emrin e profilit të IG</label>
+          <input type="text" name="name" required/>
+        </div>
+        <div class="quiz-entry-form-div">
+          <h5>2. Email</h5>
+          <label>Vendosni këtu emailin që do regjistroheni në forum.</label>
+          <input type="email" name="email" required/>
+        </div>
+          <div class="quiz-entry-form-div">
+          <h5>3. Regjistrohu në forum</h5>
+          <button class="quiz-entry-submit" type="submit">Regjistrohu</button>
+        </div>
+        <div class="g-recaptcha"
       data-sitekey="6Le8EVofAAAAAOUTZGzP_gPHoQhNUy33QfO8Z9DP"
       data-callback="onSubmit"
       data-size="invisible">
 </div>
-				<br />
-				<button id="validator" onClick="validateForm()" type="submit">Jam gati!</button>
-				<a href="vial-whitepaper.pdf" class="whitepaper-link" target="_blank">
-				<div class="whitepaper-container"><img class="whitepaper-icon" src="./ico.png" />
-					Whitepaper
-				</div>
-				</a>
-				<a href="https://www.vial.community" class="whitepaper-link">
-				<div class="whitepaper-container"><img class="whitepaper-icon" src="./ico.png" />
-					Bashkohuni në Vial
-				</div>
-			</a>
-			</form>
-		</div>
-		<!--<div class="countdown-container">
-			<h1 class="countdown-element" id="headline">Shihemi ne webinar pas: </h1>
-			<div class="countdown-element" id="countdown">
-				<ul>
-					<li class="countdown-element"><span class="countdown-element" id="days"></span>Ditë</li>
-					<li class="countdown-element"><span class="countdown-element" id="hours"></span>Orë</li>
-					<li class="countdown-element"><span class="countdown-element" id="minutes"></span>Minuta</li>
-					<li class="countdown-element"><span class="countdown-element" id="seconds"></span>Sekonda</li>
-				</ul>
-			</div>
-		</div>-->
-		<!-- </div> -->
+          <div class="quiz-entry-form-div">
+          <h5>4. Adresa e Wallet në trc20 (Nese keni nje wallet)</h5>
+          <input type="text" name="wallet"/>
+        </div>
+          <div class="quiz-entry-form-div">
+          <h5>5. Bashkohu në grupin tone të Telegram për më shumë lojra të tilla</h5>
+          <div class="quiz-entry-telegram-container">
+          <a href="https://t.me/vial_community" class="icon brands fa-telegram quiz-entry-telegram-link"><span class="quiz-entry-telegram-text">Telegram</span>
+          </a>
+          </div>
+          </div>
+        </form>
+      </div>
+		</main>
 	</section>
 	<section class="accordion container">
 		<div class="accordion2 container">
@@ -375,6 +352,7 @@
 								class="label">Telegram</span></a></li>
 					<li><a href="https://medium.com/@VialCommunity" class="icon brands fa-medium"><span
 								class="label">Medium</span></a></li>
+
 				</div>
 				<div class="socials-second">
 					<li><a href="https://discord.com/invite/EbgSjHuNdM" class="icon brands fa-discord"><span
@@ -390,8 +368,8 @@
 			</ul>
 			<ul class="copyright">
 				<li>&copy; Vial ltd.</li>
-				<li><a href="/terms-contitions">Terms and Agreements</a></li>
-				<li><a href="/policies">Privacy Policy</a></li>
+				<li><a href="../assets/terms.pdf">Terms and Agreements</a></li>
+				<li><a href="../assets/policy.pdf">Privacy Policy</a></li>
 				<li><a href="mailto:hello@vial.community">Na kontaktoni</a>
 					<!-- <li>Interested in investing? <a style="margin-left: 0.3em;" href="tel:"><i style="margin-right: 0.1em;" class="fa-solid fa-phone"></i><span class="label"></span> Contact us</a></li> -->
 			</ul>
@@ -399,10 +377,11 @@
 	</section>
 
 	<!-- Scripts -->
-	<script src="assets/js/accordion.js"></script>
-	<!--<script src="assets/js/countdown.js"></script>-->
-	<script src="assets/js/validation.js"></script>
-	<script src="assets/js/languageDetector.js"></script>
 	
+	<script src="../assets/js/accordion.js"></script>
+	<script src="assets/js/redirector.js"></script>
+	<script src="../../assets/js/languageDetector.js"></script>
+
 </body>
+
 </html>
