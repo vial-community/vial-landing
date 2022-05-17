@@ -1609,6 +1609,10 @@ p.item2__answer {
       }
     }*/
 
+    .language-row-quiz {
+      margin: 0 auto;
+    }
+
   .whitepaper-container {
     display: flex;
     justify-content: center;
