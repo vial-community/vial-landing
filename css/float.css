@@ -1,0 +1,44 @@
+span a {
+  font-size: 18px;
+  color: #cccccc;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: all 0.4s ease-in-out;
+}
+span a:hover {
+  color: #ffffff;
+}
+
+@-webkit-keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.avatar {
+  overflow: hidden;
+  transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+}
+.avatar img {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=float.css.map */
