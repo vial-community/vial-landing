@@ -60,7 +60,7 @@ body {
 
 .iframe-body {
   width: 100vw;
-  height: 750px;
+  height: 770px;
   background: transparent;
   overflow-y: hidden;
 }
@@ -117,8 +117,8 @@ body {
   position: absolute;
   max-width: max-content;
   width: 120vw;
-  bottom: 10%;
   left: -45%;
+  bottom: 70%;
   opacity: 80%;
   background-repeat: no-repeat;
   background-blend-mode: screen;
@@ -585,7 +585,7 @@ ol > li:last-child::before {
 .getready-header {
   font-size: 28px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   mix-blend-mode: normal;
 }
 
@@ -656,12 +656,16 @@ ol > li:last-child::before {
   margin-top: 12px;
 }
 
+.coins-subheader-2 {
+  margin-top: 40px;
+}
+
 .coins-text {
   margin-bottom: 20px;
 }
 
 .coins-header-2 {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 24px;
   font-weight: 600;
   margin-top: 10px;
@@ -864,6 +868,8 @@ ol > li:last-child::before {
 }
 
 .partner-wrapper {
+  position: relative;
+  z-index: 170;
   font-size: 32px;
 }
 
@@ -891,6 +897,8 @@ ol > li:last-child::before {
 }
 
 .influencer-newsletter-wrapper {
+  position: relative;
+  z-index: 180;
   height: 100%;
 }
 
