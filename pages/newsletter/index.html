@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWFWSXCS33"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-WWFWSXCS33');
+  </script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <link rel="stylesheet" href="../../css/style.css" />
   <title>Newsletter</title>
 </head>
+
 <body class="iframe-body">
-    <h3 class="influencer-newsletter-header">
+  <!--<h3 class="influencer-newsletter-header">
       Subscribe and be among the first to enjoy VIAL rewards
-    </h3>
-    <form class="influencer-newsletter-form" name="newsletter-form" method="post" action="https://formspree.io/f/xoqbwbkr">
-      <label class="newsletter-label">Email:</label>
-      <input type="email" name="email" required />
-      <button class="newsletter-button" id="newsletter-button" type="submit">Submit</button>
-    </form>
+    </h3>-->
+  <div class="g-recaptcha" data-sitekey="_your_site_key_" data-callback="onSubmit" data-size="invisible">
+  </div>
+  <form class="influencer-newsletter-form" name="newsletter-form" method="post"
+    action="https://formspree.io/f/xoqbwbkr">
+    <label class="newsletter-label">Email:</label>
+    <input type="email" name="email" required />
+    <label class="newsletter-label">Name of the business:</label>
+    <input type="text" name="business-name" required />
+    <label class="newsletter-label">Type of the business:</label>
+    <input type="text" name="business-type" required />
+    <label class="newsletter-label">Website:</label>
+    <input type="text" name="business-website" />
+    <label class="newsletter-label">How would crypto help your business:</label>
+    <textarea class="newsletter-comment" rows="3"></textarea>
+    <button class="newsletter-button" id="newsletter-button" type="submit">Submit</button>
+  </form>
+  <script async src="../../scripts/main.js"></script>
 </body>
+
 </html>

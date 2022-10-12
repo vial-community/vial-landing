@@ -60,13 +60,13 @@ body {
 
 .iframe-body {
   width: 100vw;
-  margin-top: 100px;
+  height: 750px;
   background: transparent;
+  overflow-y: hidden;
 }
 
 .iframe-subscribe-body {
   width: 100vw;
-  margin-top: 100px;
   background: transparent;
 }
 
@@ -369,11 +369,6 @@ body {
 .carousel .change_outer .element {
   display: block;
 }
-
-/*.change_inner {
-  -webkit-mask: linear-gradient(#000, #0000);
-          mask: linear-gradient(#000, #0000);
-}*/
 
 .element {
   text-decoration: underline;
@@ -868,6 +863,14 @@ ol > li:last-child::before {
   align-items: center;
 }
 
+.partner-wrapper {
+  font-size: 32px;
+}
+
+.partner-wrapper > p {
+  margin-bottom: 80px;
+}
+
 .influencer-dropdown-wrapper {
   margin-top: 20px;
 }
@@ -899,7 +902,8 @@ ol > li:last-child::before {
 }
 
 .influencer-newsletter-header {
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -920,6 +924,7 @@ ol > li:last-child::before {
   font-size: 18px;
   padding: 0.5em 1em;
   margin-top: 30px;
+  cursor: pointer;
 }
 
 .influencer-newsletter-form > input {
@@ -934,6 +939,25 @@ ol > li:last-child::before {
   font-size: 20px;
   color: #ffffff;
   padding: 0.25em 0.25em;
+}
+
+.influencer-newsletter-form > textarea {
+    position: relative;
+  opacity: 1;
+  z-index: inherit;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.49) rgba(255, 255, 255, 0.25)
+    rgba(255, 255, 255, 0.49);
+  border-radius: 6px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 0.25em 0.25em;
+}
+
+.influencer-subscribe-image {
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 
@@ -1300,30 +1324,63 @@ a.icon {
     display: block;
   }
 
+  .element {
+    text-decoration: underline;
+    text-decoration-color: #b4d902;
+    text-underline-offset: 7px;
+  }
+  
   @keyframes rotate {
     0% {
-      transform: translateY(-10px);
+      transform: translateY(0);
     }
     10%,
     15%,
     100% {
-      transform: translateY(-10px);
+      transform: translateY(0);
     }
     25%,
     36% {
-      transform: translateY(-70px);
+      transform: translateY(-45px);
     }
     46%,
     57% {
-      transform: translateY(-125px);
+      transform: translateY(-90px);
     }
     67%,
     78% {
-      transform: translateY(-180px);
+      transform: translateY(-135px);
     }
     88%,
     99% {
-      transform: translateY(-235px);
+      transform: translateY(-180px);
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: translateY(0);
+    }
+    10%,
+    15%,
+    100% {
+      transform: translateY(0px);
+    }
+    25%,
+    36% {
+      transform: translateY(-60px);
+    }
+    46%,
+    57% {
+      transform: translateY(-117px);
+    }
+    67%,
+    78% {
+      transform: translateY(-170px);
+    }
+    88%,
+    99% {
+      transform: translateY(-228px);
     }
   }
 
@@ -1537,7 +1594,7 @@ a.icon {
   }
 
   .roadmap-list-item {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px;
     font-weight: 400;
   }
