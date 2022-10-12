@@ -870,7 +870,7 @@ ol > li:last-child::before {
 .partner-wrapper {
   position: relative;
   z-index: 170;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .partner-wrapper > p {
@@ -1639,6 +1639,12 @@ a.icon {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .partner-wrapper {
+    position: relative;
+    z-index: 170;
+    font-size: 32px;
   }
 
   .influencer-header {
