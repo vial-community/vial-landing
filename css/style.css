@@ -29,13 +29,17 @@ footer {
 
 header {
   position: sticky;
-  z-index: 400; 
+  z-index: 400;
   top: 0;
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+button {
+  font-family: "Outfit", sans-serif;
 }
 
 /* BODY */
@@ -669,6 +673,7 @@ ol > li:last-child::before {
   font-size: 24px;
   font-weight: 600;
   margin-top: 10px;
+  line-height: 48px;
 }
 
 .coins-wallet-wrapper {
@@ -753,6 +758,10 @@ ol > li:last-child::before {
   margin-left: 50px;
 }
 
+.roadmap-list {
+  margin-left: 5px;
+}
+
 .roadmap-list-item {
   font-size: 24px;
   line-height: 28px;
@@ -761,6 +770,7 @@ ol > li:last-child::before {
 
 .roadmap-list-item::marker {
   color: #b4d902;
+  margin-right: -10px;
 }
 
 .vertical {
@@ -944,7 +954,8 @@ ol > li:last-child::before {
     color: #111111;
     background: rgba(180, 217, 2, 1);
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: 600;
     padding: 0.5em 1em;
     margin-top: 30px;
     cursor: pointer;
@@ -969,9 +980,9 @@ ol > li:last-child::before {
     color: #ffffff;
     padding: 0.25em 0.25em;
   }
-  
+
   .influencer-newsletter-form > textarea {
-      position: relative;
+    position: relative;
     opacity: 1;
     z-index: inherit;
     background: rgba(255, 255, 255, 0.12);
@@ -1000,7 +1011,7 @@ ol > li:last-child::before {
 }
 
 .influencer-newsletter-form > textarea {
-    position: relative;
+  position: relative;
   opacity: 1;
   z-index: inherit;
   background: rgba(255, 255, 255, 0.12);
@@ -1017,7 +1028,6 @@ ol > li:last-child::before {
   margin: 0 auto;
   margin-top: 30px;
 }
-
 
 .download-wrapper {
   position: relative;
@@ -1281,7 +1291,6 @@ a.icon {
 /* DESKTOP */
 
 @media screen and (min-width: 1001px) {
-
   html {
     overflow-x: hidden;
   }
@@ -1298,6 +1307,10 @@ a.icon {
   .header-menu {
     display: flex;
     flex-direction: row;
+  }
+
+  .header-menu-text {
+    font-size: 20px;
   }
 
   /* MAIN */
@@ -1387,7 +1400,7 @@ a.icon {
     text-decoration-color: #b4d902;
     text-underline-offset: 7px;
   }
-  
+
   @keyframes rotate {
     0% {
       transform: translateY(0);
@@ -1640,6 +1653,11 @@ a.icon {
     margin-top: 5px;
   }
 
+  .roadmap-list-item::marker {
+    color: #b4d902;
+    font-size: 36px;
+  }
+
   .desktop-roadmap-body {
     display: flex;
     justify-content: space-between;
@@ -1766,7 +1784,7 @@ a.icon {
     width: 50%;
     text-align: right;
     margin-right: 60px;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
   }
 
@@ -1776,7 +1794,7 @@ a.icon {
 
   .footer-links-container {
     flex-direction: row;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
   }
 
