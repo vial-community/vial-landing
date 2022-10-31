@@ -1387,6 +1387,11 @@ a.icon {
     height: 45px;
     overflow: hidden;
   }
+
+  .change_outer {
+    width: max-content;
+  }
+
   .carousel .change_outer .change_inner {
     position: relative;
     animation: rotate 8s ease-in-out infinite;
