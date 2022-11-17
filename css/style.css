@@ -1468,6 +1468,11 @@ a.icon {
   bottom: -135vh;
 }
 
+.whitepaper-link:hover {
+  color: #c9f202;
+  text-decoration-color: #c9f202;
+}
+
 /* DESKTOP */
 
 @media screen and (min-width: 1001px) {
@@ -2024,11 +2029,12 @@ a.icon {
   
   .settler-image {
     width: 100%;
+    max-height: 600px;
     margin: 0 auto;
   }
 
   .settler-content {
-    max-width: 1000px;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
   }
