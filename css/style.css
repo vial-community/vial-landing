@@ -1055,7 +1055,8 @@ ol > li:last-child::before {
 }
 
 @media screen and (min-width: 919px) {
-  .influencer-newsletter-form > input {
+  .influencer-newsletter-form > input,
+  .influencer-newsletter-form > select {
     position: relative;
     opacity: 1;
     z-index: inherit;
@@ -1084,7 +1085,8 @@ ol > li:last-child::before {
   }
 }
 
-.influencer-newsletter-form > input {
+.influencer-newsletter-form > input,
+.influencer-newsletter-form > select {
   position: relative;
   opacity: 1;
   z-index: inherit;
@@ -1353,6 +1355,7 @@ a.icon {
 
   .settler-content {
     margin: 3em;
+    margin-bottom: 5em;
     padding: 4em;
   }
 
@@ -1471,6 +1474,14 @@ a.icon {
 .whitepaper-link:hover {
   color: #c9f202;
   text-decoration-color: #c9f202;
+}
+
+.expertise-field {
+  background-color: #0073ff;
+}
+
+.expertise-field > option {
+  background-color: rgb(98, 19, 180);
 }
 
 /* DESKTOP */
@@ -1937,6 +1948,13 @@ a.icon {
     margin: 0 auto;
   }
 
+  .influencer-settler-wrapper {
+    max-width: 920px;
+    margin: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .download-links-wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -2037,6 +2055,7 @@ a.icon {
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 8em;
   }
 
   .settler-content-header {

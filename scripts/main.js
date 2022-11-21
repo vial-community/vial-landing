@@ -35,3 +35,15 @@ function appDownloadLinkGenerator() {
 
   return appDownloadLink;
 }
+
+function yesnoCheck(that) {
+
+  const conditionalDiv = document.getElementById('ifYes');
+
+  console.log(that.value);
+  if (that && that.value == "other") {
+      conditionalDiv.style.display = "block";
+  } else {
+      conditionalDiv.style.display = "none";
+  }
+}

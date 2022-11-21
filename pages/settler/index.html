@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWFWSXCS33"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-WWFWSXCS33');
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <link rel="stylesheet" href="../../css/style.css" />
+  <title>Settler</title>
+</head>
+
+<body class="iframe-body">
+  <!--<h3 class="influencer-newsletter-header">
+      Subscribe and be among the first to enjoy VIAL rewards
+    </h3>-->
+  <div class="g-recaptcha" data-sitekey="6Leeu3YiAAAAAKSzcDQDCzWCYXyEFeUrPz1QmzEj" data-callback="onSubmit"
+    data-size="invisible">
+  </div>
+  <form class="influencer-newsletter-form" name="newsletter-form" method="post"
+    action="https://formspree.io/f/mdojbrgn">
+    <label class="newsletter-label">Full Name:</label>
+    <input type="text" name="business-name" required />
+    <label class="newsletter-label">Email:</label>
+    <input type="email" name="email" required />
+    <label class="newsletter-label">Area of Expertise:</label>
+    <select name="Area of Expertise" class="expertise-field" onchange="yesnoCheck(this)" required>
+      <option value="" disabled selected>Select</option>
+      <option value="Social Media / Community Manager">Social Media / Community Manager</option>
+      <option value="Content Writer">Content Writer</option>
+      <option value="Graphic Design">Graphic Design</option>
+      <option value="Blockchain / Development">Blockchain / Development</option>
+      <option value="other">Other</option>
+        <label for="other">Other</label>
+        <input id="ifYes" type="text" name="other" style="display: none;"/>
+    </select>
+    <label class="newsletter-label">Website:</label>
+    <input type="text" name="business-website" />
+    <label class="newsletter-label">How would crypto help your business:</label>
+    <textarea class="newsletter-comment" rows="3"></textarea>
+    <button class="newsletter-button" id="newsletter-button" type="submit">Submit</button>
+  </form>
+  <script async src="../../scripts/main.js"></script>
+</body>
+
+</html>
