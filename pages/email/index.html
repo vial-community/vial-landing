@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWFWSXCS33"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-WWFWSXCS33');
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <link rel="stylesheet" href="../../css/style.css" />
+  <title>Subscribe</title>
+</head>
+
+<body class="iframe-body">
+  <!--<h3 class="influencer-newsletter-header">
+      Subscribe and be among the first to enjoy VIAL rewards
+    </h3>-->
+  <div class="g-recaptcha" data-sitekey="6Leeu3YiAAAAAKSzcDQDCzWCYXyEFeUrPz1QmzEj" data-callback="onSubmit"
+    data-size="invisible">
+  </div>
+  <form class="email-form" action="https://formspree.io/f/xqkjvgvb" method="POST">
+    <label class="email-label">
+      Your email:
+      <input class="email-input" type="email" name="email"/>
+    </label>
+    <button class="inspire-button email-button" type="submit">Send</button>
+  </form>
+  <script async src="../../scripts/main.js"></script>
+</body>
+
+</html>
