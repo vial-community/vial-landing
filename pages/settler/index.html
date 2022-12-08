@@ -37,9 +37,9 @@
   <form class="influencer-newsletter-form" name="newsletter-form" method="post"
     action="https://formspree.io/f/mdojbrgn">
     <label class="newsletter-label">Full Name:</label>
-    <input type="text" name="name" required />
+    <input type="text" name="Name" required />
     <label class="newsletter-label">Email:</label>
-    <input type="email" name="email" required />
+    <input type="email" name="Email" required />
     <label class="newsletter-label">Area of Expertise:</label>
     <select name="Area of Expertise" class="expertise-field" onchange="yesnoCheck(this)" required>
       <option value="" disabled selected>Select</option>
@@ -49,12 +49,12 @@
       <option value="Blockchain / Development">Blockchain / Development</option>
       <option value="other">Other</option>
         <label for="other">Other</label>
-        <input id="ifYes" type="text" name="other" style="display: none;"/>
+        <input id="ifYes" type="text" name="Other Expertise" style="display: none;"/>
     </select>
     <label class="newsletter-label">Portfolio website:</label>
-    <input type="text" name="portfolio-website" />
+    <input type="text" name="Portfolio Website" />
     <label class="newsletter-label">Based on your area of expertise how would you help ViAl grow?</label>
-    <textarea class="newsletter-comment" name="comment" rows="3" required></textarea>
+    <textarea class="newsletter-comment" name="Comment" rows="3" required></textarea>
     <button class="newsletter-button" id="newsletter-button" type="submit">Submit</button>
   </form>
   <script async src="../../scripts/main.js"></script>
