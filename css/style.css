@@ -2161,3 +2161,15 @@ a.icon {
     bottom: 40vh;
   }
 }
+
+.collaborate-main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+/* BLOG */
+
+.hidden {
+  display: none;
+}
