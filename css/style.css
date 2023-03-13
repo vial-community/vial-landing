@@ -187,10 +187,10 @@ body {
 }
 
 .header-menu-text {
-  padding: 5px 10px;
-  margin: 0px 10px;
+  padding: 5px 5px;
+  margin: 0px 5px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .header-menu-app {
@@ -1160,6 +1160,11 @@ ol > li:last-child::before {
   margin-top: 30px;
 }
 
+.download-qr {
+  width: 46px;
+  height: 46px;
+}
+
 .download-wrapper {
   position: relative;
   display: flex;
@@ -1547,7 +1552,7 @@ a.icon {
   }
 
   .header-menu-text {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   /* MAIN */
@@ -2131,6 +2136,14 @@ a.icon {
   }
 }
 
+@media (min-width: 1200px) {
+  .header-menu-text {
+    padding: 5px 10px;
+    margin: 0px 10px;
+    font-size: 16px;
+  }
+}
+
 @media (min-width: 1600px) {
   .settler-float-1 {
     right: 25vw;
@@ -2167,9 +2180,56 @@ a.icon {
   flex-direction: column-reverse;
 }
 
-
 /* BLOG */
 
 .hidden {
   display: none;
+}
+
+/* BANNER */
+.banner-image {
+  position: relative;
+  border-radius: 15px;
+  margin-top: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 780px) {
+  .home-wrapper {
+    margin-right: 3em;
+    margin-left: 1.5em;
+  }
+  section {
+    margin-right: 3em !important;
+    margin-left: 1.5em !important;
+  }
+}
+
+.home-image-link-management {
+  position: relative;
+}
+
+.download-appstore-wrapper,
+.download-playstore-wrapper {
+  width: 125px;
+}
+
+.download-links-wrapper-home {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  bottom: -50px;
+}
+
+@media screen and (min-width: 1000px) {
+  .download-links-wrapper-home {
+    position: absolute;
+    bottom: 17.5px;
+    margin: 0;
+    justify-content: flex-end;
+    gap: 20px;
+    right: 125px;
+  } 
 }

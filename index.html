@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- JQuery -->
+  <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <title>Vial</title>
@@ -82,11 +82,11 @@
             vial.community
           </a>
         </div>
-        <!--<div class="header-menu-text header-menu-app">
-          <a class="header-app-link" href="/">
+        <div class="header-menu-text header-menu-app">
+          <a id="header-link" class="header-app-link" href="">
             Download the App
           </a>
-        </div>-->
+        </div>
       </div>
     </div>
   </header>
@@ -98,6 +98,13 @@
         <li><a class="nav-button" href="./assets/litepaper.pdf" target="_blank">Litepaper</a></li>
         <li><a class="nav-button" href="#section-vision">About</a></li>
         <li><a class="nav-button" href="https://www.vial.community" target="_blank">vial.community</a></li>
+        <li>
+          <div class="header-menu-text header-menu-app" >
+            <a id="header-link" class="nav-button" href="" style="margin-bottom: 0px;">
+              Download the App
+            </a>
+          </div>
+        </li>
       </ul>
     </div>
   </aside>
@@ -107,14 +114,29 @@
         <div class="home-wrapper">
           <div class="home-video-wrapper">
             <h1 class="home-video-header">Small steps, Big Impact</h1>
-            <iframe style="position: relative;
+            <div class="home-image-link-management">
+              <img class="banner-image" src="./assets/images/banner.png" />
+              <div class="download-links-wrapper download-links-wrapper-home">
+                <div class="download-appstore-wrapper">
+                  <a href="https://apps.apple.com/al/app/vial-move-towards-web3/id6444441586">
+                    <img class="download-appstore" src="../assets/images/appstore.svg" />
+                  </a>
+                </div>
+                <div class="download-playstore-wrapper">
+                  <a href="https://play.google.com/store/apps/details?id=com.vial.mobile">
+                    <img class="download-playstore" src="../assets/images/playstore.svg" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--<iframe style="position: relative;
                            z-index: 120;
                            border-radius: 15px;
                            margin-top: 40px;" width="717" height="380" src="https://www.youtube.com/embed/StlhAZzgSU4"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
-            </iframe>
+            </iframe>-->
           </div>
           <img class="circle-top-1" src="./assets/images/circle1-full.png" />
           <h3 class="home-video-subheader">
@@ -427,8 +449,8 @@
             <h1 class="inspire-header">
               Subscribe to our Newsletter
             </h1>
-            <iframe style="margin-top: 50px;" src="../pages/email/index.html" class="influencer-newsletter-container" id="newsletter"
-          height="400px"></iframe>
+            <iframe style="margin-top: 50px;" src="../pages/email/index.html" class="influencer-newsletter-container"
+              id="newsletter" height="400px"></iframe>
             <!--<div class="inspire-image-2-wrapper">
               <img class="inspire-image-2 avatar" src="./assets/images/inspire-cube.png" />
             </div>-->
@@ -469,13 +491,14 @@
               </div>
               <div class="download-links-wrapper">
                 <div class="download-appstore-wrapper">
-                  <img class="download-appstore" src="../assets/images/appstore.svg" />
+                  <a href="https://apps.apple.com/al/app/vial-move-towards-web3/id6444441586">
+                    <img class="download-appstore" src="../assets/images/appstore.svg" />
+                  </a>
                 </div>
                 <div class="download-playstore-wrapper">
-                  <img class="download-playstore" src="../assets/images/playstore.svg" />
-                </div>
-                <div class="download-qr-wrapper">
-                  <img class="download-qr" src="../assets/images/qr.svg" />
+                  <a href="https://play.google.com/store/apps/details?id=com.vial.mobile">
+                    <img class="download-playstore" src="../assets/images/playstore.svg" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -493,14 +516,15 @@
       <div class="footer-container">
         <div class="footer-copyright">
           <img class="footer-vial-logo" src="" />
-          Copyright &#169; 2022 Vial Ltd
+          Copyright &#169; 2023 Vial Ltd
         </div>
         <div class="footer-links-wrapper">
           <div class="footer-links-container">
             <div class="footer-technicals">
               <!--<a class="footer-technicals-link" href="">Team</a>-->
               <a class="footer-technicals-link" href="mailto:hello@vial.community" target="_blank">Contact</a>
-              <a class="footer-technicals-link" href="./assets/terms-conditions.pdf" target="_blank">Terms &#38; Conditions</a>
+              <a class="footer-technicals-link" href="./assets/terms-conditions.pdf" target="_blank">Terms &#38;
+                Conditions</a>
               <a class="footer-technicals-link" href="./assets/privacy-policy.pdf" target="_blank">Privacy Policy</a>
               <!--<a class="footer-technicals-link" href="">Help</a>
               <a class="footer-technicals-link" href="">Blog</a>-->
@@ -552,7 +576,7 @@
   </footer>
   <script async src="./scripts/menu.js"></script>
   <script src="./scripts/blog.js"></script>
-  <!--<script async src="./scripts/main.js"></script>-->
+  <script async src="./scripts/main.js"></script>
 
 </body>
 
