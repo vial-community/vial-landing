@@ -176,6 +176,7 @@ body {
 }
 
 .header-logo {
+  width: 100px !important;
   margin-top: 20px;
   margin-bottom: 15px;
 }
@@ -1538,6 +1539,9 @@ a.icon {
   }
   img {
     max-width: fit-content;
+  }
+  .header-logo-image {
+    width: 150px;
   }
 
   /* DESKTOP HEADER */
